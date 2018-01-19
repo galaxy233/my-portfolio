@@ -4,34 +4,52 @@
     <meta charset="utf-8">
     <title>My Portfolio</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/css/jqcloud.min.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://use.fontawesome.com/5d79f599f5.js"></script>
   </head>
   <body>
     <nav>
       <div class="nav-left">
-        <h5>VICTOR</h5>
+        <h5>VICTOR MATONIS</h5>
       </div>
       <div class="nav-center">
         <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">PROJECTS</a>
-        <a href="#">SKILLS</a>
-        <a href="#">CONTACT</a>
-      </div>
-      <div class="nav-right">
-        <h5>LOGIN</h5>
+        <a href="#about">ABOUT</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#contact">CONTACT</a>
       </div>
     </nav>
 
     <section id="intro">
+      <div>
+        <div class="diamond">
+          <div class="pic">
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            FULL
+          </div>
+          <div>
+            STACK
+          </div>
+          <div>
+            DEVELOPER
+          </div>
+        </div>
+      </div>
 
     </section>
 
     <section id="about">
       <div class="header-text-uline">
         <h2>ABOUT</h2>
-        <div></div>
+        <div class="black"></div>
       </div>
         <div class="about-items">
           <div class="about-item">
@@ -104,5 +122,133 @@
           </div>
         </div>
     </section>
+
+    <section id="parallax">
+      <div class="overlay">
+        <div class="header-text-uline">
+          <h2>I AM A WEB DEVELOPER</h2>
+          <div class="red"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="header-text-uline">
+        <h2>PROJECTS</h2>
+        <div class="black"></div>
+      </div>
+      <div class="project-items">
+        <div class="project-item">
+          <div>
+            <img src="../img/t-king.png" />
+            <div onclick="location.href='http://tournament-king.win'">
+              <div>
+                Tournament King
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-item">
+          <div>
+            <img src="../img/swap.png" />
+            <div onclick="location.href='https://swapio.club'">
+              <div>
+                SwapIO
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-item">
+          <div>
+            <img src="../img/swapi.png" />
+            <div onclick="location.href='https://galaxy233.github.io/star-wars/'">
+              <div>
+                Star Wars Explorer
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-item">
+          <div>
+            <img src="../img/bbc.png" />
+            <div onclick="location.href='https://galaxy233.github.io/bbc-clone/'">
+              <div>
+                BBC Clone
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-item">
+          <div>
+            <img src="../img/digital_marketing.png" />
+            <div onclick="location.href='https://galaxy233.github.io/landing-page'">
+              <div>
+                Digital Marketing
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="header-text-uline">
+        <h2>SKILLS</h2>
+        <div class="blue"></div>
+      </div>
+
+      <div id="keywords">
+
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="header-text-uline">
+        <h2>CONTACT</h2>
+        <div class="black"></div>
+      </div>
+
+      <div class="contact-container">
+        <p>
+          To get in touch, please send me an email. I would love to hear about your next project, or anything else on your mind.
+        </p>
+        <div class="contact-icons">
+          <a href="mailto:vjmatonis@gmail.com"><i class="fa fa-envelope fa-5x" aria-hidden="true"></i></a>
+          <a href="https://github.com/galaxy233"><i class="fa fa-github fa-5x" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/vjmatonis/"><i class="fa fa-linkedin fa-5x" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="js/jqcloud.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    var words = [
+        {text:'JavaScript',weight: 10},
+        {text:'Python',weight: 5},
+        {text:'Linux',weight: 5},
+        {text:'Bitcoin',weight: 7},
+        {text:'HTML',weight: 9},
+        {text:'CSS',weight: 7},
+        {text:'OSX',weight: 7},
+        {text:'Git',weight: 6},
+        {text:'NodeJS',weight: 7},
+        {text:'Flask',weight: 4},
+        {text:'Express',weight: 7},
+        {text:'React',weight: 7},
+        {text:'Redux',weight: 5},
+        {text:'MySQL',weight: 5},
+        {text:'PostgreSQL',weight: 6},
+    ]
+    $(document).ready(function() {
+        $('#keywords').jQCloud(words, {
+            width: 850,
+            height: 350
+        });
+    })
+    </script>
   </body>
 </html>

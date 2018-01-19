@@ -2,7 +2,6 @@ body {
   font-family: 'Nunito Sans', sans-serif; }
 
 nav {
-  position: fixed;
   height: 100px;
   width: 100%;
   display: flex;
@@ -13,6 +12,15 @@ nav {
 a, h2 {
   color: #56bbf9; }
 
+.red {
+  background-color: red; }
+
+.blue {
+  background-color: #56bbf9; }
+
+.black {
+  background-color: black; }
+
 .nav-center a {
   margin: 0 10px;
   text-decoration: none; }
@@ -21,7 +29,6 @@ a, h2 {
   border-bottom: 2px solid lightgrey; }
   .header-text-uline > div {
     width: 35%;
-    background-color: black;
     margin: auto;
     margin-bottom: -2px;
     height: 2px; }
@@ -31,7 +38,40 @@ section {
 
 #intro {
   background-color: black;
-  height: 500px; }
+  height: 500px;
+  padding: 0;
+  display: flex; }
+  #intro > div {
+    width: 100%; }
+    #intro > div:first-child {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    #intro > div:last-child {
+      background-color: #56bbf9;
+      font-size: 7.5em;
+      padding: 0 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #intro > div:last-child > div > div:last-child {
+        color: white; }
+
+.diamond {
+  width: 250px;
+  height: 250px;
+  transform: rotate(-45deg);
+  border: 2px solid #56bbf9;
+  overflow: hidden; }
+
+.pic {
+  background-image: url("../img/me.jpg");
+  background-size: cover;
+  width: 350px;
+  height: 350px;
+  margin: -50px;
+  transform: rotate(45deg); }
 
 #about {
   display: flex;
@@ -54,5 +94,88 @@ section {
       max-width: 150px; }
   .about-item .text-container {
     margin: 0px 50px; }
+
+#parallax {
+  background-image: url("../img/yousef.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  background-size: cover;
+  position: relative;
+  padding: 0; }
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .overlay h2 {
+    color: white; }
+
+#projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.project-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px; }
+
+.project-item {
+  width: 33.33%;
+  position: relative; }
+  .project-item img {
+    width: 100%; }
+  .project-item > div {
+    border: 2px solid #56bbf9;
+    margin: 10px;
+    position: relative; }
+    .project-item > div > div {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0);
+      position: absolute;
+      top: 0;
+      transition: 0.4s all ease;
+      color: rgba(255, 255, 255, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5em; }
+      .project-item > div > div:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        cursor: pointer; }
+
+#skills {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.contact-icons a {
+  margin: 10px;
+  color: black; }
+  .contact-icons a:hover {
+    color: #56bbf9; }
 
 /*# sourceMappingURL=style.css.map */
